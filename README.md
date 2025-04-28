@@ -7,9 +7,9 @@ Crowdstrike agent quarantined file on a Windows host are placed in the following
 *C:\\Windows\\System32\\Drivers\\CrowdStrike\\Quarantine\\*
 
 Every quarantine action lead to two file:
-* a ciphered version of the original file named **<file_sha256>_quarantine**
+* a ciphered version of the original file named **<file_sha256>_<id>_quarantine**
   
-* a CSQ file that contains the original path of the quarantined file named **<file_sha256>_quarantine.csq**
+* a CSQ file that contains the original path of the quarantined file named **<file_sha256>_<id>_quarantine.csq**
 
 In order to see the original path of the quaranted file you can open the .csq file with any program, cat, hexeditor, nano, vi, etc..
 
@@ -33,7 +33,7 @@ After deciphering a file the script check if inserted hash SHA256 (-s parameter)
 
 Example, key known:
 ```
-user$ python3 decipher_CS_quarantined.py -i eaa9dc1c9dc8620549fee5f1399488292s49d2c8767b58b7d0356564fd43e6_er3484cb_quarantine -k 0x6a -o decphered_file -s eaa9dc1c9dc8620549fee5f1399488292s49d2c8767b58b7d0356564fd43e6
+user$ python3 decipher_CS_quarantined.py -i eaa9dc1c9dc8620549fee5f1399488292s49d2c8767b58b7d0356564fd43e6_er3484cb_quarantine -k 0x6a -o deciphered_file -s eaa9dc1c9dc8620549fee5f1399488292s49d2c8767b58b7d0356564fd43e6
 [+] Deciphering file ...
 [+] Deciphering key inserted by user: 0x6a
 [+] Deciphering successfully
