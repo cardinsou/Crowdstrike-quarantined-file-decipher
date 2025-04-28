@@ -1,0 +1,1 @@
+# Crowdstrike-quarantined-file-decipher
