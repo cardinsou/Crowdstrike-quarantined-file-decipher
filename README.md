@@ -7,7 +7,7 @@ Crowdstrike agent quarantined file on a Windows host are placed in the following
 *C:\\Windows\\System32\\Drivers\\CrowdStrike\\Quarantine\\*
 
 Every quarantine action lead to two file:
-* a ciphered version of the original file named **<file_sha256>_<id>_quarantine**
+* a ciphered version of the original file named **<file_sha256>_quarantine**
   
 * a CSQ file that contains the original path of the quarantined file named **<file_sha256>_<id>_quarantine.csq**
 
